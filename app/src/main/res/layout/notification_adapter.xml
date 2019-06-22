@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        android:elevation="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+    <com.bantu.lift.user.customtext.TextViewBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABC"
+        android:id="@+id/message"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:id="@+id/abc"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:scaleType="fitXY"
+                        android:id="@+id/carImage"
+                        android:src="@drawable/ic_carimg"
+                        android:layout_margin="5dp"
+                        />
+
+                    <com.bantu.lift.user.customtext.TextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wagnor"
+                        android:id="@+id/car_Name"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <com.bantu.lift.user.customtext.TextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12344"
+                        android:id="@+id/carNumber"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.75"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/profile"
+                            android:src="@drawable/profile_round"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/profile"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="1"
+                                android:orientation="horizontal"
+                                >
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    > <com.bantu.lift.user.customtext.TextViewBold
+                                    android:id="@+id/ProfileName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ABC"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" /></LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="end"
+                                    > </LinearLayout>
+                            </LinearLayout>
+
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:orientation="horizontal">
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:id="@+id/tv_smoking"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Contact Number"
+                                    android:textColor="@color/warm_grey"
+                                    android:textSize="14sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:id="@+id/tv_smoking_divider"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" : "
+                                    android:textColor="@color/pinkish_grey"
+
+                                    android:textSize="15sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:id="@+id/mobile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="7076789676"
+                                    android:textColor="@color/pinkish_grey"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Price"
+
+                                    android:textColor="@color/warm_grey"
+                                    android:textSize="14sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" : "
+                                    android:textColor="@color/pinkish_grey"
+                                    android:textSize="14sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:id="@+id/price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="31"
+
+                                    android:textColor="@color/pinkish_grey"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Seat "
+                                    android:textColor="@color/warm_grey"
+                                    android:textSize="14sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" : "
+                                    android:textColor="@color/pinkish_grey"
+                                    android:textSize="14sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:id="@+id/passerger"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="4"
+
+                                    android:textColor="@color/pinkish_grey"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="2dp"
+                                android:orientation="horizontal">
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date"
+                                    android:textColor="@color/warm_grey"
+                                    android:textSize="14sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" : "
+                                    android:textColor="@color/pinkish_grey"
+
+                                    android:textSize="14sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:id="@+id/startdate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12 jan 2018"
+                                    android:textColor="@color/pinkish_grey"
+
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+
+                                android:layout_marginTop="2dp"
+                                android:orientation="horizontal">
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Start Location "
+
+                                    android:textColor="@color/warm_grey"
+                                    android:textSize="14sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" : "
+
+                                    android:textSize="14sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:id="@+id/startLocation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Noida"
+
+                                    android:textColor="@color/pinkish_grey"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+
+                                android:layout_marginTop="2dp"
+                                android:orientation="horizontal">
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="End Location "
+
+                                    android:textColor="@color/warm_grey"
+                                    android:textSize="14sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" : "
+
+                                    android:textSize="14sp" />
+
+                                <com.bantu.lift.user.customtext.TextViewRegular
+                                    android:id="@+id/endLocation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Noida"
+
+                                    android:textColor="@color/pinkish_grey"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
