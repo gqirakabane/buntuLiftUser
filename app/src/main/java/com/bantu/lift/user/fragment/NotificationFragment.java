@@ -1,5 +1,8 @@
 package com.bantu.lift.user.fragment;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -16,6 +19,7 @@ import com.bantu.lift.user.MainActivity;
 import com.bantu.lift.user.R;
 import com.bantu.lift.user.adapter.NotificationAdapter;
 import com.bantu.lift.user.implementer.NotificationPresenterImplementer;
+import com.bantu.lift.user.utils.SharedPreferenceConstants;
 import com.bantu.lift.user.view.INotificationView;
 
 
@@ -27,6 +31,8 @@ public class NotificationFragment extends Fragment implements View.OnClickListen
     private String mParam2;
     NotificationAdapter notificationAdapter;
     TextView noRecard;
+    SharedPreferences sharedPreferences;
+
     NotificationPresenterImplementer notificationPresenterImplementer;
     public NotificationFragment() {
     }
@@ -61,6 +67,8 @@ public class NotificationFragment extends Fragment implements View.OnClickListen
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recycler_view = view.findViewById(R.id.recycler_view);
+        sharedPreferences = getActivity().getApplication().getSharedPreferences(SharedPreferenceConstants.PREF, Context.MODE_PRIVATE);
+
         noRecard = view.findViewById(R.id.noRecard);
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -91,11 +99,33 @@ public class NotificationFragment extends Fragment implements View.OnClickListen
 
     @Override
     public void OnLoginError() {
-
+        logoutUser();
     }
 
     @Override
     public void OnInitView(View view) {
 
+    }
+
+    public void logoutUser()
+    {
+        String refreshedToken = sharedPreferences.getString(SharedPreferenceConstants.fcmId, "");
+
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(SharedPreferenceConstants.email, "");
+        editor.putString(SharedPreferenceConstants.name, "");
+        editor.putString(SharedPreferenceConstants.serviceKey, "");
+        editor.putString(SharedPreferenceConstants.userId, "");
+        editor.putString(SharedPreferenceConstants.homeCity, "");
+        editor.putString(SharedPreferenceConstants.workCity, "");
+        editor.putString(SharedPreferenceConstants.mobile, "");
+        editor.putString(SharedPreferenceConstants.checkData, "");
+        editor.clear();
+        editor.commit();
+        sharedPreferences.edit().putString(SharedPreferenceConstants.fcmId, refreshedToken).apply();
+        Intent i1 = new Intent();
+        i1.setClassName("com.bantu.lift.user", "com.bantu.lift.user.activity.LoginActivity");
+        i1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i1);
     }
 }

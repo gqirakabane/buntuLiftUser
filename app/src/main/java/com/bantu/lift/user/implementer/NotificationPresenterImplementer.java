@@ -76,7 +76,8 @@ public class NotificationPresenterImplementer implements INotificationlPresenter
 
                     } else if (status_val == 2) {
                         FunctionHelper.dismissDialog();
-                        Toast.makeText(context, response.body().getErrorMsg(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "You have already login in other device", Toast.LENGTH_SHORT).show();
+                   iNotificationView.OnLoginError();
                     }
                 }
             }

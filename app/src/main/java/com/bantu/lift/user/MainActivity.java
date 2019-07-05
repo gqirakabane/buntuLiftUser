@@ -316,7 +316,7 @@ public class MainActivity extends AppCompatActivity
                         sharedPreferences.edit().putString(SharedPreferenceConstants.fcmId, refreshedToken).apply();
 
                         Intent i1 = new Intent();
-                        i1.setClassName("com.example.saurabh.carpalluser", "com.example.saurabh.carpalluser.activity.LoginActivity");
+                        i1.setClassName("com.bantu.lift.user", "com.bantu.lift.user.activity.LoginActivity");
                         i1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(i1);
 
@@ -337,10 +337,8 @@ public class MainActivity extends AppCompatActivity
                         editor.clear();
                         editor.commit();
                         sharedPreferences.edit().putString(SharedPreferenceConstants.fcmId, refreshedToken).apply();
-
                         Intent i1 = new Intent();
-
-                        i1.setClassName("com.example.saurabh.carpalluser", "com.example.saurabh.carpalluser.activity.LoginActivity");
+                        i1.setClassName("com.bantu.lift.user", "com.bantu.lift.user.activity.LoginActivity");
                         i1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(i1);
                         // Toast.makeText(getApplicationContext(), response.body().getErrorMsg(), Toast.LENGTH_SHORT).show();
